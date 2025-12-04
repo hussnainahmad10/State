@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -27,8 +28,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _counter = 0;
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: Text("Home")),
+      body: Center(child: Text("$_counter", style: TextStyle(fontSize: 25))),
+    );
   }
 }
